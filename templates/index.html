@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Network</title>
+
+    <!-- LINK TO CSS (IMPORTANT) -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-<h1>🌐 Social Network System</h1>
+    <div class="container">
 
-<p>{{ message }}</p>
+        <h1>Social Network System</h1>
 
-<form method="POST">
-    <input type="text" name="user" placeholder="User" required>
-    <input type="text" name="friend" placeholder="Friend" required>
+        <p class="message">{{ message }}</p>
 
-    <button name="action" value="add">➕ Add</button>
-    <button name="action" value="remove">❌ Remove</button>
-</form>
+        <!-- FORM -->
+        <form method="POST" class="form">
+            <input type="text" name="user" placeholder="Enter User" required>
+            <input type="text" name="friend" placeholder="Enter Friend" required>
 
-<h2>📊 Network Graph</h2>
+            <div class="buttons">
+                <button type="submit" name="action" value="add" class="add-btn">➕ Add</button>
+                <button type="submit" name="action" value="remove" class="remove-btn">❌ Remove</button>
+            </div>
+        </form>
 
-<div class="graph">
-    {% for user, friends in graph.items() %}
-        <div class="card">
-            <h3>{{ user }}</h3>
-            <p>{{ friends }}</p>
+        <!-- GRAPH DISPLAY -->
+        <h2> Network Graph</h2>
+
+        <div class="graph">
+            {% for user, friends in graph.items() %}
+                <div class="card">
+                    <h3>{{ user }}</h3>
+                    <p>{{ friends }}</p>
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-</div>
+
+    </div>
 
 </body>
 </html>
