@@ -1,5 +1,25 @@
 # Social Network App
 
+## Open the web app
+
+1. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the Flask server:
+
+```bash
+python3 app.py
+```
+
+3. Open your browser at:
+
+```text
+http://127.0.0.1:5000
+```
+
 A small Python-based social network system that stores users and friendships in a MySQL database. It supports both a command-line interface and a Flask web interface. The app supports registration, login, friend requests, friendship acceptance, recommendations, undoing a friendship action, and deleting users.
 
 ## Project Structure
