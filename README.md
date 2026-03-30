@@ -290,11 +290,3 @@ A small benchmark script is included in `system/benchmark.py` to measure recomme
 python3 system/benchmark.py
 ```
 
-## Improvements
-
-Potential future enhancements:
-
-- Persist pending friend requests in the database.
-- Replace plaintext password storage with hashed passwords.
-- Add proper input validation and error handling.
-- Implement tests under `tests/`.
